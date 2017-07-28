@@ -19,7 +19,7 @@ class PurchaseInfo extends Component {
   }
 
   componentDidMount() {
-    fetch('https://openapi.etsy.com/v2/listings/175112598?includes=Inventory,ShippingInfo&api_key=nrfza0h31bu4g5biq6bq6g4c')
+    fetch('https://openapi.etsy.com/v2/listings/' + this.props.listingId + '?includes=Inventory,ShippingInfo&api_key=nrfza0h31bu4g5biq6bq6g4c')
       .then(response => response.json())
       .then(response => {
 

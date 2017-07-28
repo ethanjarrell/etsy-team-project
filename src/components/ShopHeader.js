@@ -17,7 +17,7 @@ class ShopHeader extends Component {
 
   componentDidMount() {
     fetch(
-      'https://openapi.etsy.com/v2/listings/175112598?includes=Shop/Listings/MainImage&api_key=nrfza0h31bu4g5biq6bq6g4c'
+      'https://openapi.etsy.com/v2/listings/' + this.props.listingId + '?includes=Shop/Listings/MainImage&api_key=nrfza0h31bu4g5biq6bq6g4c'
     )
       .then(response => response.json())
       .then(response => {

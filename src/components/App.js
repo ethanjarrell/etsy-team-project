@@ -9,37 +9,28 @@ import ProdDesc from './ProdDesc'
 import ShopSidebar from './ShopSidebar'
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state = {
-      results: {}
-    }
-  }
-  // componentDidMount() {
-  //   fetch('https://openapi.etsy.com/v2/listings/175112598?includes=Shop/Listings/MainImage&api_key=nrfza0h31bu4g5biq6bq6g4c').then(response => response.json()).then(response => {
-  //     this.setState({
-  //       results: response.results
-  //     });
-  //     console.log(this.state.results);
-  //   })
-  // }
   render() {
+    // change this ID to change all of the fetches
+    const listingId = "538796965";
+
     return (
       <div className="App">
 				<div className='row justify-content-center'>
 					<div className='col-10'>
-						<ShopHeader />
+						<ShopHeader listingId={listingId} />
 					</div>
 				</div>
 				<div className = 'row justify-content-center'>
 					<div className='col-6'>
-		      	<LikeBanner />
-						<ProductImage />
-						<ProdDesc />
+		      	<LikeBanner listingId={listingId} />
+						<ProductImage listingId={listingId} />
+						<ProdDesc listingId={listingId} />
 					</div>
 					<div className='col-4'>
-						<PurchaseInfo />
-					  <ShopSidebar />
+
+						<PurchaseInfo listingId={listingId} />
+						<ShopSidebar listingId={listingId} />
+
 					</div>
 				</div>
 			</div>

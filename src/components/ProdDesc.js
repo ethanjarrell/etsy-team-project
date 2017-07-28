@@ -30,7 +30,7 @@ class ProdDesc extends Component {
 	}
 	componentDidMount() {
 		console.log("now doing the didmount.");
-		fetch("https://openapi.etsy.com/v2/listings/175112598?includes=Shop/User/Feedback,Shop/Listings/MainImage&api_key=nrfza0h31bu4g5biq6bq6g4c").then(response => response.json()).then(response => {
+		fetch("https://openapi.etsy.com/v2/listings/" + this.props.listingId + "?includes=Shop/User/Feedback,Shop/Listings/MainImage&api_key=nrfza0h31bu4g5biq6bq6g4c").then(response => response.json()).then(response => {
 			this.setState({results: response.results});
 
 			this.setState({prod_desc: response.results[0].description});
@@ -167,21 +167,20 @@ class ProdDesc extends Component {
 			}).then((response) => {
 
 				this.setState({feedback_count: response.results[0].Shop.User.feedback_info.count, feedback_score: this.state.feedbackstar});
-
-			});
-			fetch("https://openapi.etsy.com/v2/users/7775028/feedback/from-buyers?api_key=nrfza0h31bu4g5biq6bq6g4c")
-			.then(response => response.json()).then(response => {
-				console.log(response);
-				let reviewCards = response.results.map(reviewCard => {
-					return (
-						<div className="card" key={reviewCard.feedback_id}>
-							<img className='useravatar' src={'useravatar.png'}/>
-							{reviewCard.message}
-						</div>
-					)
+				fetch("https://openapi.etsy.com/v2/users/" + this.state.results[0].user_id + "/feedback/from-buyers?api_key=nrfza0h31bu4g5biq6bq6g4c")
+				.then(response => response.json()).then(response => {
+					console.log(response);
+					let reviewCards = response.results.map(reviewCard => {
+						return (
+							<div className="card" key={reviewCard.feedback_id}>
+								<img className='useravatar' src={'useravatar.png'}/>
+								{reviewCard.message}
+							</div>
+						)
+					})
+					this.setState({reviews: reviewCards})
 				})
-				this.setState({reviews: reviewCards})
-			})
+			});
 		}
 		onClick(event) {
 			console.log(event.target.value);
