@@ -27,9 +27,9 @@ class PurchaseInfo extends Component {
 
         let mapInventory = products.map(product => {
           return (
-            <option value={product.offerings[0].price.currency_formatted_short}
+            <option value={product.offerings[0].price.currency_formatted_raw}
               key={product.product_id}>{product.property_values[0].values}
-              - {product.offerings[0].price.currency_formatted_short}</option>
+              - {product.offerings[0].price.currency_formatted_raw}</option>
           )
         });
 
@@ -76,7 +76,7 @@ class PurchaseInfo extends Component {
       </button>
       <div id="DIV_7">
         <div id="DIV_8">
-          <span id="SPAN_9">{this.state.price}</span>
+          <span id="SPAN_9">${this.state.price}+</span>
           <meta content="USD" id="META_10" />
           <meta content="600.00" id="META_11" />
           <meta content="in_stock" id="META_12" /><span id="SPAN_13"></span>

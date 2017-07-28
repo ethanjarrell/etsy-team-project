@@ -39,7 +39,7 @@ class App extends Component {
 					</div>
 					<div className='col-4'>
 						<PurchaseInfo />
-						<ShopSidebar />
+					  <ShopSidebar />
 					</div>
 				</div>
 			</div>
