@@ -1,0 +1,30 @@
+.myheader {
+  margin-top: 20px;
+  border-color: black;
+  background-color: #F6F5F1;
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 70px;
+  font-size: 15px;
+}
+
+.likeHeaders {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+  margin-left: 20px;
+  height: 70px;
+  font-size: 20px;
+}
+
+.h3 {
+  font-size: 20px;
+}
+
+.h5 {
+  font-size: 20px;
+}

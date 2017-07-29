@@ -1,0 +1,47 @@
+.col-10 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F6F5F1;
+  width: 828px;
+}
+
+.shopheader-shop-pic {
+  height: 75px;
+  margin: 7px 13px;
+}
+
+.shopheader-listings-thumb {
+  height: 75px;
+  margin: 7px 13px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+}
+
+#shopname {
+  margin-left: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.shopname a {
+  width: 20px;
+  text-decoration: none;
+  font-family: serif;
+  font-size: 25px;
+}
+
+.shopheader-listings-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  text-decoration: none;
+  color: black;
+  height: 75px;
+  width: 75px;
+  background-color: white;
+}

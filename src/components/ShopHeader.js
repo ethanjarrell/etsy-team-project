@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
+import "../styles/ShopHeader.css";
 
 class ShopHeader extends Component {
   constructor() {
@@ -62,13 +63,13 @@ class ShopHeader extends Component {
             className="shopheader-shop-pic"
           />
         </a>
-        <div className="col-1">
+        <div id="shopname" className="col-1 shopname">
           <a href={this.state.shop_url}>
             {this.state.shop_name}
           </a>
           <button>Favorite shop</button>
         </div>
-        <div className="col-5" />
+        <div className="col-3" />
         {this.state.shop_listings}
         <a href={this.state.shop_url}>
           <div className="shopheader-listings-thumb">

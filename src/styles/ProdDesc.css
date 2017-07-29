@@ -6,7 +6,14 @@ body {
 	width: 15px
 }
 
+.nav-item {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
 .nav-tabs {
+	display: flex;
+	flex-flow: row nowrap;
 	width: 70%
 }
 
