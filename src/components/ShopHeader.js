@@ -55,7 +55,7 @@ class ShopHeader extends Component {
   render() {
     console.log(this.state);
     return (
-      <div className="ShopHeader row col-10">
+      <div className="ShopHeader row col-12">
         <a href={this.state.shop_url} className="col-1">
           <img
             src={this.state.shop_picurl}
@@ -65,9 +65,13 @@ class ShopHeader extends Component {
         </a>
         <div id="shopname" className="col-1 shopname">
           <a href={this.state.shop_url}>
+          </a>
+          <div className="Shoptitle">
+          <a className="realShopTitle">
             {this.state.shop_name}
           </a>
           <button>Favorite shop</button>
+          </div>
         </div>
         <div className="col-3" />
         {this.state.shop_listings}

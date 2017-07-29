@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
+import '../styles/ShopSidebar.css';
 
 class ShopSidebar extends Component {
   constructor() {
@@ -34,7 +35,7 @@ class ShopSidebar extends Component {
         let shopListingsCards = tempListings.map(listing => {
           return (
             <div
-              className="col-6 card-sm shop-listings-card"
+              className="columncards col-6 card-sm shop-listings-card"
               key={listing.listing_id}
             >
               <a href={listing.url}>
@@ -45,11 +46,11 @@ class ShopSidebar extends Component {
                     className="shop-listings-card-pic"
                   />
                 </div>
-                <div>
-                  <p>
+                <div className="desc">
+                  <p className="title">
                     {listing.title}
                   </p>
-                  <p>
+                  <p className="price">
                     ${listing.price}
                   </p>
                 </div>
@@ -83,11 +84,14 @@ class ShopSidebar extends Component {
 
     return (
       <div className="ShopSidebar">
+        <div className="picture">
         <img
           alt="stuff"
           className="shop-sidebar-shop-pic"
           src={this.state.shop_picurl}
         />
+      </div>
+      <div className="description">
         <a href={this.state.shop_url}>
           <h3>
             {this.state.shop_name}
@@ -95,6 +99,7 @@ class ShopSidebar extends Component {
         </a>
         <div className="shop-listings-cards">
           {this.state.shop_listings}
+        </div>
         </div>
       </div>
     );

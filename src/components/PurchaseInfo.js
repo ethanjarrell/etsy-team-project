@@ -88,7 +88,7 @@ class PurchaseInfo extends Component {
         <div id="DIV_16">
           <div id="DIV_17">
 
-            <label for="inventory-variation-select-0" id="LABEL_18">
+            <label htmlFor="inventory-variation-select-0" id="LABEL_18">
               {this.state.propertyName}
             </label> <span id="SPAN_19">
 							<select id="SELECT_20" name="listing_variation_id" onChange={this.handleChange}>
@@ -104,7 +104,7 @@ class PurchaseInfo extends Component {
           </div>
           <div id="DIV_25">
 
-            <label for="inventory-select-quantity" id="LABEL_26">
+            <label htmlFor="inventory-select-quantity" id="LABEL_26">
               Quantity
             </label> <span id="SPAN_27">
 							<select id="SELECT_28">

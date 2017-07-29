@@ -1,3 +1,5 @@
+
+
 .myheader {
   margin-top: 20px;
   border-color: black;
@@ -5,7 +7,7 @@
   display: flex;
   flex-direction: row nowrap;
   justify-content: flex-start;
-  align-items: center;
+  align-items: space-around;
   height: 70px;
   font-size: 15px;
 }
